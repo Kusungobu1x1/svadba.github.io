@@ -1,14 +1,15 @@
-/* === СБРОС === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* === ШРИФТЫ === */
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('back.jpg') repeat;
+    background: url('back.jpg') center center / cover no-repeat fixed;
     color: #F5F0E6;
     line-height: 1.7;
     min-height: 100vh;
-    margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 body::before {
@@ -16,7 +17,7 @@ body::before {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(10, 10, 10, 0.88); /* тёмный фильтр */
+    background: rgba(10, 10, 10, 0.88);
     z-index: -1;
 }
 
@@ -41,7 +42,15 @@ body::before {
     white-space: nowrap;
 }
 
-/* === ГЕРОЙСКАЯ СЕКЦИЯ === */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
 .hero-section {
     display: flex;
     align-items: center;
@@ -100,18 +109,18 @@ body::before {
     font-size: clamp(0.8em, 1.8vw, 1em);
     color: #D4C5A8;
     font-weight: 300;
-    font-style: italic;
     letter-spacing: 1px;
 }
 
 .oval-photo {
     width: 360px;
-    height: 480px;
+    height: 360px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #D4C5A8;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
+    margin: 0 auto;
 }
 
 .oval-img {
@@ -121,17 +130,6 @@ body::before {
     object-position: center;
 }
 
-/* === КОНТЕЙНЕР === */
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* === КОЛЬЦА === */
 .rings-icon {
     width: 100px;
     height: 70px;
@@ -139,13 +137,12 @@ body::before {
     display: block;
 }
 
-/* === ЗАГОЛОВКИ === */
 .section-title {
-    margin: 80px 0 30px; /* было 100px 0 60px → теперь меньше */
+    margin: 80px 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* расстояние между кольцами и заголовком */
+    gap: 12px;
 }
 
 .section-title h2 {
@@ -158,7 +155,6 @@ body::before {
     white-space: nowrap;
 }
 
-/* === ТАЙМЕР === */
 .countdown-block {
     display: flex;
     justify-content: center;
@@ -190,7 +186,6 @@ body::before {
     font-weight: 400;
 }
 
-/* === РАСПОРЯДОК ДНЯ — МАЛЕНЬКИЕ КВАДРАТИКИ === */
 .timing {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -219,19 +214,18 @@ body::before {
     font-size: 1.05em;
 }
 
-/* === ДРЕССКОД — БЕЗ ФОНА И ОБВОДКИ === */
 .dresscode {
     display: flex;
     justify-content: center;
-    margin: 20px 0 70px; /* было 70px 0 → теперь меньше сверху */
+    align-items: center;
+    margin: 20px 0 70px;
+    width: 100%;
 }
 
 .dresscode-group {
-    text-align: center;
-    padding: 16px 20px;
-    border-radius: 16px;
     display: flex;
     justify-content: center;
+    padding: 16px 20px;
     background: transparent;
     border: none;
 }
@@ -240,43 +234,19 @@ body::before {
     display: flex;
     gap: 16px;
     justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
 .color-circle {
-    width: 50px !important;
-    height: 50px !important;
-    min-width: 50px !important;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #D4C5A8;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     flex-shrink: 0;
 }
 
-.colors {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-
-.color-circle {
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-    border-radius: 50%;
-    border: 2px solid #D4C5A8;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    flex-shrink: 0;
-}
-
-/* === МЕСТО === */
-.section-title + p {
-    margin: 20px 0 50px !important;
-    padding: 0 10px;
-}
-
-/* === КАРТА === */
 .map-container {
     margin: 60px 0;
     padding: 0 1px;
@@ -291,7 +261,6 @@ body::before {
     box-shadow: 0 15px 40px rgba(0,0,0,0.8);
 }
 
-/* === КНОПКА === */
 .btn {
     background: transparent;
     color: #D4C5A8;
@@ -310,7 +279,6 @@ body::before {
     color: #0A0A0A;
 }
 
-/* === МОДАЛЬНОЕ ОКНО === */
 .modal {
     display: none;
     position: fixed;
@@ -346,7 +314,6 @@ body::before {
     margin: 0 auto 15px;
 }
 
-/* === ФОРМА === */
 form input, form select, form textarea, form button {
     width: 100%;
     padding: 12px;
@@ -369,7 +336,6 @@ form button:hover {
     color: #0A0A0A;
 }
 
-/* === КОНТАКТЫ — ВИДИМО НА ВСЕХ УСТРОЙСТВАХ === */
 .contact-footer {
     margin: 100px 0 80px;
     font-size: 1.1em;
@@ -401,7 +367,6 @@ form button:hover {
     padding: 0 15px;
 }
 
-/* === ПЛАВНОЕ ПОЯВЛЕНИЕ === */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -412,140 +377,42 @@ form button:hover {
     transform: translateY(0);
 }
 
-/* === АДАПТИВ < 995px === */
-@media (max-width: 994px) {
-    .hero-section {
-        flex-direction: column;
-        gap: 25px;
-        padding: 0 20px;
-    }
-    .hero-left, .hero-right {
-        justify-content: center;
-    }
-    .container {
-        padding: 30px 15px; /* вместо 30px 10px */
-    }
-    .hero-left .our-title,
-    .hero-right .names-title {
-        align-items: center;
-        text-align: center;
-    }
-    .oval-photo {
-        width: 280px;
-        height: 370px;
-    }
-
-    /* РАСПОРЯДОК — ГОРИЗОНТАЛЬНЫЕ ПОЛОСКИ */
-    .timing {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .timing-item {
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 14px 18px;
-        min-height: auto;
-        gap: 12px;
-        font-size: 1em;
-    }
-    .timing-item span {
-        min-width: 50px;
-        font-size: 1.1em;
-    }
-
-    /* ДРЕССКОД — ГОРИЗОНТАЛЬНО, БЕЗ ФОНА */
-    .dresscode {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    .dresscode-group {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 16px 20px;
-        min-height: auto;
-        background: transparent;
-        border: none;
-    }
-    .dresscode-group h3 {
-        margin: 0;
-        font-size: 1em;
-        flex: 1;
-    }
-    .colors {
-        gap: 10px;
-    }
-    .color-circle {
-        width: 40px !important;
-        height: 40px !important;
-        min-width: 40px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .dresscode { margin: 50px 0; }
-    .dresscode-group { padding: 16px; }
-    .color-circle { width: 40px !important; height: 40px !important; min-width: 40px !important; }
-    .container { max-width: 95%; padding: 25px 15px; }
-    .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
-    .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); padding: 0 10px; }
-    .oval-photo { width: 220px; height: 290px; }
-    .rings-icon { width: 70px; height: 50px; }
-    .countdown-block { gap: 15px; }
-    .countdown-number { font-size: clamp(2.5em, 8vw, 3.5em); }
-    .btn { padding: 12px 28px; font-size: 0.95em; }
-    .map-fullwidth { height: 350px; }
-    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; display: flex; justify-content: center; align-items: center; min-width: 220px;}
-}
-
-/* === 320px — iPhone SE, старые Android === */
 @media (max-width: 320px) {
     .container { padding: 20px 10px; }
-    .special { font-size: 2.2em !important; }
-    .name { font-size: 1.2em !important; }
-    .oval-photo { width: 180px; height: 240px; }
-    .countdown-number { font-size: 2.2em; }
-    .btn { padding: 10px 20px; font-size: 0.9em; }
-    .rings-icon { width: 60px; height: 42px; }
-    .timing-item, .dresscode-group { padding: 12px; font-size: 0.9em; }
-    .color-circle { width: 32px !important; height: 32px !important; }
+    .oval-photo { width: 180px; height: 180px; }
+    .color-circle { width: 32px; height: 32px; }
+    .colors { gap: 10px; }
 }
 
-/* === 375px — iPhone 12/13/14 === */
 @media (max-width: 375px) {
     .container { padding: 25px 12px; }
-    .special { font-size: 2.4em !important; }
-    .oval-photo { width: 200px; height: 266px; }
-    .countdown-number { font-size: 2.5em; }
-    .rings-icon { width: 65px; height: 46px; }
+    .oval-photo { width: 200px; height: 200px; }
+    .color-circle { width: 36px; height: 36px; }
 }
 
-/* === 414px — iPhone Plus, Pixel === */
 @media (max-width: 414px) {
-    .container { padding: 25px 15px; }
-    .special { font-size: 2.6em !important; }
-    .oval-photo { width: 210px; height: 280px; }
+    .oval-photo { width: 220px; height: 220px; }
 }
 
-/* === 480px — старые планшеты === */
 @media (max-width: 480px) {
-    .container { padding: 30px 15px; }
-    .special { font-size: 2.8em !important; }
+    .oval-photo { width: 240px; height: 240px; }
 }
 
-/* === 768px — iPad Mini === */
 @media (max-width: 768px) {
     .container { padding: 30px 15px; }
-    .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
-    .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); }
-    .oval-photo { width: 220px; height: 290px; }
-    .rings-icon { width: 70px; height: 50px; }
-    .countdown-block { gap: 15px; }
-    .countdown-number { font-size: clamp(2.5em, 8vw, 3.5em); }
-    .btn { padding: 12px 28px; font-size: 0.95em; }
-    .map-fullwidth { height: 350px; }
+    .oval-photo { width: 260px; height: 260px; }
+    .color-circle { width: 40px; height: 40px; }
+    .colors { gap: 12px; }
+    .timing { grid-template-columns: 1fr; }
+    .timing-item { flex-direction: row; justify-content: flex-start; padding: 14px 18px; gap: 12px; }
+    .timing-item span { min-width: 50px; }
 }
 
+@media (max-width: 994px) {
+    .hero-section { flex-direction: column; gap: 25px; padding: 0 20px; }
+    .oval-photo { width: 280px; height: 280px; }
+}
+
+@media (min-width: 1200px) {
+    .oval-photo { width: 380px; height: 380px; }
+}
