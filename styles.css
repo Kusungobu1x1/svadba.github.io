@@ -481,7 +481,7 @@ form button:hover {
     .container { max-width: 95%; padding: 25px 15px; }
     .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
     .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); padding: 0 10px; }
+    .section-title h2 { font-size: clamp(1.2em, 5vw, 1.8em); padding: 0 10px; }
     .oval-photo { width: 220px; height: 290px; }
     .rings-icon { width: 70px; height: 50px; }
     .countdown-block { gap: 15px; }
@@ -490,3 +490,4 @@ form button:hover {
     .map-fullwidth { height: 350px; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; display: flex; justify-content: center; align-items: center; min-width: 220px;}
 }
+
