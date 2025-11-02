@@ -63,8 +63,8 @@ document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
 
     const text = `*Новое подтверждение!*\n\n*Имя:* ${name}\n*Присутствие:* ${attendance}\n*Email:* ${email}\n*Сообщение:* ${message}`;
 
-    const BOT_TOKEN = 'ВАШ_ТОКЕН';
-    const CHAT_ID = 'ВАШ_CHAT_ID';
+    const BOT_TOKEN = '8479080360:AAFIoT2sNkbfWKRChBqGlQ2MQW4emkuyRnA';
+    const CHAT_ID = '452090422';
 
     try {
         const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -91,4 +91,5 @@ ymaps.ready(() => {
     map.geoObjects.add(new ymaps.Placemark([56.4307, 40.4444], {
         balloonContent: '<strong>Арт-отель "Николаевский Посад"</strong><br>г. Суздаль'
     }, { preset: 'islands#brownDotIcon' }));
+
 });
