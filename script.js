@@ -53,7 +53,6 @@ document.getElementById('openModal').onclick = () => modal.style.display = 'bloc
 document.querySelector('.close').onclick = () => modal.style.display = 'none';
 window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 
-
 // === TELEGRAM ===
 document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -64,8 +63,8 @@ document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
 
     const text = `*Новое подтверждение!*\n\n*Имя:* ${name}\n*Присутствие:* ${attendance}\n*Email:* ${email}\n*Сообщение:* ${message}`;
 
-    const BOT_TOKEN = '8479080360:AAFIoT2sNkbfWKRChBqGlQ2MQW4emkuyRnA';
-    const CHAT_ID = '452090422';
+    const BOT_TOKEN = 'ВАШ_ТОКЕН';
+    const CHAT_ID = 'ВАШ_CHAT_ID';
 
     try {
         const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
