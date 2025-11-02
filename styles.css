@@ -24,7 +24,7 @@ body::before {
     font-family: 'Transforma Mix Variable', sans-serif !important;
     font-weight: 700 !important;
     font-size: clamp(3.2em, 5.5vw, 5.2em) !important;
-    color: #8B6F47 !important;
+    color: #D4C5A8 !important;
     letter-spacing: 4px;
     text-transform: uppercase;
     line-height: 1;
@@ -141,11 +141,11 @@ body::before {
 
 /* === ЗАГОЛОВКИ === */
 .section-title {
-    margin: 100px 0 60px;
+    margin: 80px 0 30px; /* было 100px 0 60px → теперь меньше */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 12px; /* расстояние между кольцами и заголовком */
 }
 
 .section-title h2 {
@@ -221,30 +221,36 @@ body::before {
 
 /* === ДРЕССКОД — БЕЗ ФОНА И ОБВОДКИ === */
 .dresscode {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin: 70px 0;
-    align-items: start;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 70px; /* было 70px 0 → теперь меньше сверху */
 }
 
 .dresscode-group {
     text-align: center;
-    padding: 20px;
+    padding: 16px 20px;
     border-radius: 16px;
-    min-height: 120px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    /* УБРАН ФОН И ОБВОДКА */
     background: transparent;
     border: none;
 }
 
-.dresscode-group h3 {
-    margin-bottom: 12px;
-    font-size: 1.1em;
-    color: #D4C5A8;
+.colors {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.color-circle {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    border-radius: 50%;
+    border: 2px solid #D4C5A8;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    flex-shrink: 0;
 }
 
 .colors {
@@ -478,10 +484,13 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
+    .dresscode { margin: 50px 0; }
+    .dresscode-group { padding: 16px; }
+    .color-circle { width: 40px !important; height: 40px !important; min-width: 40px !important; }
     .container { max-width: 95%; padding: 25px 15px; }
     .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
     .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.2em, 5vw, 1.8em); padding: 0 10px; }
+    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); padding: 0 10px; }
     .oval-photo { width: 220px; height: 290px; }
     .rings-icon { width: 70px; height: 50px; }
     .countdown-block { gap: 15px; }
@@ -531,7 +540,7 @@ form button:hover {
     .container { padding: 30px 15px; }
     .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
     .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.2em, 5vw, 1.8em); }
+    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); }
     .oval-photo { width: 220px; height: 290px; }
     .rings-icon { width: 70px; height: 50px; }
     .countdown-block { gap: 15px; }
@@ -539,5 +548,3 @@ form button:hover {
     .btn { padding: 12px 28px; font-size: 0.95em; }
     .map-fullwidth { height: 350px; }
 }
-
-
