@@ -100,14 +100,14 @@ body::before {
 
 .date-hero {
     font-size: clamp(0.9em, 2vw, 1.1em);
-    color: #D4C5A8;
+    color: #F5F0E6;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
 .place-hero {
     font-size: clamp(0.8em, 1.8vw, 1em);
-    color: #D4C5A8;
+    color: #F5F0E6;
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -117,7 +117,7 @@ body::before {
     height: 360px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #D4C5A8;
+    border: 3px solid #F5F0E6;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
     margin: 0 auto;
@@ -416,3 +416,4 @@ form button:hover {
 @media (min-width: 1200px) {
     .oval-photo { width: 380px; height: 380px; }
 }
+
