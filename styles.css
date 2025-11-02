@@ -4,10 +4,20 @@
 /* === ШРИФТЫ === */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #0A0A0A;
+    background: url('back.jpg') repeat;
     color: #F5F0E6;
     line-height: 1.7;
     min-height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 10, 10, 0.88); /* тёмный фильтр */
+    z-index: -1;
 }
 
 .special {
@@ -29,16 +39,6 @@ body {
     line-height: 1.1 !important;
     margin: 0;
     white-space: nowrap;
-}
-
-/* === ФОН === */
-.bg-container {
-    position: absolute;
- WI   top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0A0A0A;
-    z-index: -2;
 }
 
 /* === ГЕРОЙСКАЯ СЕКЦИЯ === */
@@ -413,11 +413,11 @@ form button:hover {
         gap: 25px;
         padding: 0 20px;
     }
-    .container {
-        padding: 30px 15px; /* вместо 30px 10px */
-    }
     .hero-left, .hero-right {
         justify-content: center;
+    }
+    .container {
+        padding: 30px 15px; /* вместо 30px 10px */
     }
     .hero-left .our-title,
     .hero-right .names-title {
@@ -481,7 +481,7 @@ form button:hover {
     .container { max-width: 95%; padding: 25px 15px; }
     .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
     .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
-    .section-title h2 { font-size: clamp(1.2em, 5vw, 1.8em); padding: 0 10px; }
+    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); padding: 0 10px; }
     .oval-photo { width: 220px; height: 290px; }
     .rings-icon { width: 70px; height: 50px; }
     .countdown-block { gap: 15px; }
@@ -491,3 +491,51 @@ form button:hover {
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; display: flex; justify-content: center; align-items: center; min-width: 220px;}
 }
 
+/* === 320px — iPhone SE, старые Android === */
+@media (max-width: 320px) {
+    .container { padding: 20px 10px; }
+    .special { font-size: 2.2em !important; }
+    .name { font-size: 1.2em !important; }
+    .oval-photo { width: 180px; height: 240px; }
+    .countdown-number { font-size: 2.2em; }
+    .btn { padding: 10px 20px; font-size: 0.9em; }
+    .rings-icon { width: 60px; height: 42px; }
+    .timing-item, .dresscode-group { padding: 12px; font-size: 0.9em; }
+    .color-circle { width: 32px !important; height: 32px !important; }
+}
+
+/* === 375px — iPhone 12/13/14 === */
+@media (max-width: 375px) {
+    .container { padding: 25px 12px; }
+    .special { font-size: 2.4em !important; }
+    .oval-photo { width: 200px; height: 266px; }
+    .countdown-number { font-size: 2.5em; }
+    .rings-icon { width: 65px; height: 46px; }
+}
+
+/* === 414px — iPhone Plus, Pixel === */
+@media (max-width: 414px) {
+    .container { padding: 25px 15px; }
+    .special { font-size: 2.6em !important; }
+    .oval-photo { width: 210px; height: 280px; }
+}
+
+/* === 480px — старые планшеты === */
+@media (max-width: 480px) {
+    .container { padding: 30px 15px; }
+    .special { font-size: 2.8em !important; }
+}
+
+/* === 768px — iPad Mini === */
+@media (max-width: 768px) {
+    .container { padding: 30px 15px; }
+    .special { font-size: clamp(2.5em, 7vw, 3.5em) !important; }
+    .name { font-size: clamp(1.3em, 4vw, 1.7em) !important; }
+    .section-title h2 { font-size: clamp(1.4em, 5vw, 1.8em); }
+    .oval-photo { width: 220px; height: 290px; }
+    .rings-icon { width: 70px; height: 50px; }
+    .countdown-block { gap: 15px; }
+    .countdown-number { font-size: clamp(2.5em, 8vw, 3.5em); }
+    .btn { padding: 12px 28px; font-size: 0.95em; }
+    .map-fullwidth { height: 350px; }
+}
