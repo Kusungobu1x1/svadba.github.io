@@ -378,6 +378,7 @@ form button:hover {
 }
 
 @media (max-width: 320px) {
+    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .container { padding: 20px 10px; }
     .oval-photo { width: 180px; height: 180px; }
     .color-circle { width: 32px; height: 32px; }
@@ -385,20 +386,24 @@ form button:hover {
 }
 
 @media (max-width: 375px) {
+    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .container { padding: 25px 12px; }
     .oval-photo { width: 200px; height: 200px; }
     .color-circle { width: 36px; height: 36px; }
 }
 
 @media (max-width: 414px) {
+    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .oval-photo { width: 220px; height: 220px; }
 }
 
 @media (max-width: 480px) {
+    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .oval-photo { width: 240px; height: 240px; }
 }
 
 @media (max-width: 768px) {
+    .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .container { padding: 30px 15px; }
     .oval-photo { width: 260px; height: 260px; }
     .color-circle { width: 40px; height: 40px; }
@@ -416,4 +421,5 @@ form button:hover {
 @media (min-width: 1200px) {
     .oval-photo { width: 380px; height: 380px; }
 }
+
 
