@@ -53,6 +53,7 @@ document.getElementById('openModal').onclick = () => modal.style.display = 'bloc
 document.querySelector('.close').onclick = () => modal.style.display = 'none';
 window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 
+
 // === TELEGRAM ===
 document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -91,5 +92,4 @@ ymaps.ready(() => {
     map.geoObjects.add(new ymaps.Placemark([56.4307, 40.4444], {
         balloonContent: '<strong>Арт-отель "Николаевский Посад"</strong><br>г. Суздаль'
     }, { preset: 'islands#brownDotIcon' }));
-
 });
