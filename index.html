@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша Свадьба</title>
+
+    <!-- ШРИФТЫ -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Transforma Mix Trial -->
+    <style>
+        @font-face {
+            font-family: 'Transforma Mix';
+            src: url('fonts/TransformaMix_Trial-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Transforma Mix Variable';
+            src: url('fonts/TransformaMix-Variable.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ФОН -->
+    <div class="bg-container"></div>
+
+    <div class="container">
+
+        <!-- ГЕРОЙСКАЯ СЕКЦИЯ -->
+        <div class="hero-section fade-in">
+            <!-- ЛЕВАЯ СТОРОНА -->
+            <div class="hero-left">
+                <div class="our-title">
+                    <h1 class="special">НАША</h1>
+                    <p class="date-hero">10 июля 2026, 17:00</p>
+                    <p class="place-hero">Николаевский Посад</p>
+                </div>
+            </div>
+
+            <!-- ЦЕНТР — ФОТО -->
+            <div class="hero-center">
+                <div class="oval-photo">
+                    <img src="images/couple.jpg" alt="Никита и Анастасия" class="oval-img">
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ СТОРОНА -->
+            <div class="hero-right">
+                <div class="names-title">
+                    <h2 class="name">Никиты<br>Анастасии</h2>
+                    <h1 class="special">СВАДЬБА</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПРИВЕТСТВИЕ -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Дорогие гости!</h2>
+        </div>
+        <p class="fade-in">Приглашаем Вас на наш праздник — нашу свадьбу!</p>
+        <p class="fade-in">Мы будем счастливы видеть каждого из Вас!</p>
+        <p class="fade-in">Мы будем рады, если при выборе наряда вы поддержите цветовую гамму нашего праздника!</p>
+
+        <!-- ТАЙМЕР -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>До свадьбы осталось</h2>
+        </div>
+        <div class="countdown-block fade-in" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" data-unit="days">00</div>
+                <div class="countdown-label">Дней</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" data-unit="hours">00</div>
+                <div class="countdown-label">Часов</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" data-unit="minutes">00</div>
+                <div class="countdown-label">Минут</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" data-unit="seconds">00</div>
+                <div class="countdown-label">Секунд</div>
+            </div>
+        </div>
+
+        <!-- РАСПОРЯДОК ДНЯ — МАЛЕНЬКИЕ КВАДРАТИКИ -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Распорядок дня</h2>
+        </div>
+        <div class="timing fade-in">
+            <div class="timing-item"><span>14:30</span> ЗАГС</div>
+            <div class="timing-item"><span>15:00</span> Сбор гостей</div>
+            <div class="timing-item"><span>16:00</span> Выездная регистрация</div>
+            <div class="timing-item"><span>17:00</span> Банкет</div>
+        </div>
+
+        <!-- ДРЕССКОД — БЕЗ ФОНА И ОБВОДКИ -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Дресскод</h2>
+        </div>
+        <div class="dresscode fade-in">
+            <div class="dresscode-group">
+                <h3>Для женщин</h3>
+                <div class="colors">
+                    <div class="color-circle" style="background:#000000;"></div>
+                    <div class="color-circle" style="background:#FFFFFF;"></div>
+                    <div class="color-circle" style="background:#8B4513;"></div>
+                </div>
+            </div>
+            <div class="dresscode-group">
+                <h3>Для мужчин</h3>
+                <div class="colors">
+                    <div class="color-circle" style="background:#000000;"></div>
+                    <div class="color-circle" style="background:#808080;"></div>
+                    <div class="color-circle" style="background:#FFFFFF;"></div>
+                    <div class="color-circle" style="background:#8B4513;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- МЕСТО ПРОВЕДЕНИЯ -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Место проведения</h2>
+        </div>
+        <p class="fade-in">г. Суздаль, Туристический комплекс Арт-отель "Николаевский Посад"</p>
+
+        <!-- КАРТА -->
+        <div class="map-container fade-in">
+            <div class="map-fullwidth" id="map"></div>
+        </div>
+
+        <!-- RSVP -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Подтвердите присутствие</h2>
+        </div>
+        <p class="fade-in">Дорогие гости! Подтвердите, пожалуйста, свое присутствие на нашей свадьбе!</p>
+        <p class="fade-in">Не ломайте голову над подарком — мы будем рады вашим пожеланиям в конвертах.</p>
+        <p class="fade-in">Если у Вас есть вопрос, можете задать его нам или организатору!</p>
+        <button id="openModal" class="btn fade-in">Подтвердить участие</button>
+
+        <!-- ЗАКЛЮЧЕНИЕ -->
+        <div class="section-title fade-in">
+            <svg class="rings-icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>С любовью</h2>
+        </div>
+        <p class="section-text fade-in">Приглашаем Вас разделить с нами радость этого счастливого праздника!</p>
+
+        <!-- КОНТАКТЫ — ВОССТАНОВЛЕНО -->
+        <footer class="contact-footer fade-in">
+            <p><strong>По всем вопросам:</strong></p>
+            <p><i class="fas fa-phone icon-phone"></i> Анастасия: <a href="tel:+79807511334" class="contact-link">+7 980 751 13 34</a></p>
+        </footer>
+
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <svg class="rings-icon modal-rings" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(35,50) rotate(-25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+                <g transform="translate(105,50) rotate(25) scale(1.1)">
+                    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#D4C5A8" stroke-width="3"/>
+                    <ellipse cx="0" cy="-2" rx="26" ry="24" fill="none" stroke="#F5F0E6" stroke-width="1.5" opacity="0.6"/>
+                    <ellipse cx="0" cy="2" rx="26" ry="24" fill="none" stroke="#8B6F47" stroke-width="1" opacity="0.4"/>
+                </g>
+            </svg>
+            <h2>Подтверждение присутствия</h2>
+            <form id="rsvpForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <select id="attendance" required>
+                    <option value="">Будете ли вы?</option>
+                    <option value="Да, буду">Да, буду</option>
+                    <option value="Нет, не смогу">Нет, не смогу</option>
+                </select>
+                <input type="email" id="email" placeholder="Ваш email (опционально)">
+                <textarea id="message" placeholder="Вопросы или пожелания" rows="3"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Yandex Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+</html>
