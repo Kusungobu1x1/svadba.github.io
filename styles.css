@@ -379,7 +379,7 @@ form button:hover {
 
 @media (max-width: 320px) {
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
-    .container { padding: 20px 10px; }
+    .container { padding: 20px 15px; }
     .oval-photo { width: 180px; height: 180px; }
     .color-circle { width: 32px; height: 32px; }
     .colors { gap: 10px; }
@@ -387,7 +387,7 @@ form button:hover {
 
 @media (max-width: 375px) {
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
-    .container { padding: 25px 12px; }
+    .container { padding: 25px 15px; }
     .oval-photo { width: 200px; height: 200px; }
     .color-circle { width: 36px; height: 36px; }
 }
@@ -422,7 +422,3 @@ form button:hover {
 @media (min-width: 1200px) {
     .oval-photo { width: 380px; height: 380px; }
 }
-
-
-
-
