@@ -396,6 +396,7 @@ form button:hover {
 }
 
 @media (max-width: 414px) {
+    .name { text-align: center; margin-left: 50px; }
     .container { margin-left: 20px }
     .section-title h2 { font-size: clamp(1.4em, 4.5vw, 2.6em); }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
@@ -429,4 +430,3 @@ form button:hover {
 @media (min-width: 1200px) {
     .oval-photo { width: 380px; height: 380px; }
 }
-
