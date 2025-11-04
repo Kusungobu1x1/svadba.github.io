@@ -379,7 +379,7 @@ form button:hover {
 
 @media (max-width: 320px) {
     .container { margin-left: 50px }
-    .section-title h2 { font-size: clamp(1em, 4.5vw, 2.6em); }
+    .section-title h2 { font-size: clamp(1em, 4.5vw, 2.6em) !important; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .container { padding: 20px 15px; margin-left: 15px }
     .oval-photo { width: 180px; height: 180px; }
@@ -389,7 +389,7 @@ form button:hover {
 
 @media (max-width: 375px) {
     .container { margin-left: 20px }
-    .section-title h2 { font-size: clamp(1.2em, 4.5vw, 2.6em); }
+    .section-title h2 { font-size: clamp(1.2em, 4.5vw, 2.6em) !important; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .container { padding: 25px 15px; }
     .oval-photo { width: 200px; height: 200px; }
@@ -399,14 +399,14 @@ form button:hover {
 @media (max-width: 414px) {
     .name { text-align: center; margin-left: 50px; }
     .container { margin-left: 20px }
-    .section-title h2 { font-size: clamp(1.4em, 4.5vw, 2.6em); }
+    .section-title h2 { font-size: clamp(1.4em, 4.5vw, 2.6em) !important; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .oval-photo { width: 220px; height: 220px; }
 }
 
 @media (max-width: 480px) {
     .container { margin-left: 30px }
-    .section-title h2 { font-size: clamp(1.4em, 4.5vw, 2.6em); }
+    .section-title h2 { font-size: clamp(1.4em, 4.5vw, 2.6em) !important; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
     .oval-photo { width: 240px; height: 240px; }
 }
@@ -431,4 +431,5 @@ form button:hover {
 @media (min-width: 1200px) {
     .oval-photo { width: 380px; height: 380px; }
 }
+
 
