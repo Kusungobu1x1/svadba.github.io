@@ -27,7 +27,7 @@ body::before {
 }
 
 .special {
-    font-family: 'Balsamiq Sans', sans-serif !important;
+    font-family: "Pacifico", cursive;
     font-weight: 700 !important;
     font-size: clamp(3.2em, 5.5vw, 5.2em) !important;
     color: #8B6F47 !important;
@@ -450,3 +450,4 @@ form button:hover {
         max-width: none;
     }
 }
+
