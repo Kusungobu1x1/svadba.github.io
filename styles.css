@@ -489,7 +489,7 @@ form button:hover {
 
 /* Дополнительные исправления для очень маленьких устройств */
 @media (max-width: 380px) {
-    .section-title h2 { font-size: clamp(0.8em, 4.5vw, 2.6em) !important; }
+    .section-title h2 { font-size: clamp(0.8em, 4.5vw, 2.6em); }
     .container { padding: 15px 10px; }
     .hero-section { gap: 15px; }
     .oval-photo { width: 180px; height: 180px; }
@@ -501,7 +501,7 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-    .section-title h2 { font-size: clamp(1.1em, 4.5vw, 2.6em) !important; }
+    .section-title h2 { font-size: clamp(1.1em, 4.5vw, 2.6em); }
     .hero-left, .hero-right { justify-content: center; }
     .hero-left .our-title, .hero-right .names-title { align-items: center; text-align: center; }
     .name { text-align: center; margin-left: 0; }
@@ -516,7 +516,7 @@ form button:hover {
 }
 
 @media (max-width: 994px) {
-    .section-title h2 { font-size: clamp(1.2em, 4.5vw, 2.6em) !important; }
+    .section-title h2 { font-size: clamp(1.2em, 4.5vw, 2.6em); }
     .hero-left, .hero-right { justify-content: center; }
     .hero-left .our-title, .hero-right .names-title { align-items: center; text-align: center; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
@@ -529,7 +529,6 @@ form button:hover {
     .rings-image { max-width: 140px; max-height: 100px; }
 }
 
-/* Убедимся, что модальное окно тоже центрировано на мобильных */
 @media (max-width: 480px) {
     .modal-content {
         margin: 20% auto;
