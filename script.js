@@ -19,6 +19,7 @@ function updateTimer() {
 }
 
 updateTimer();
+
 const fadeElems = document.querySelectorAll('.fade-in');
 function checkFade() {
     const triggerBottom = window.innerHeight * 0.9;
@@ -38,6 +39,7 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', () => {
     requestAnimationFrame(checkFade);
 });
+
 window.addEventListener('resize', checkFade);
 
 const modal = document.getElementById('modal');
@@ -79,5 +81,3 @@ ymaps.ready(() => {
         balloonContent: '<strong>Арт-отель "Николаевский Посад"</strong><br>г. Суздаль'
     }, { preset: 'islands#brownDotIcon' }));
 });
-
-
