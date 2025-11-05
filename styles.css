@@ -501,7 +501,6 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-    .section-title h2 { font-size: clamp(1.1em, 4.5vw, 2.6em); }
     .hero-left, .hero-right { justify-content: center; }
     .hero-left .our-title, .hero-right .names-title { align-items: center; text-align: center; }
     .name { text-align: center; margin-left: 0; }
@@ -516,7 +515,6 @@ form button:hover {
 }
 
 @media (max-width: 994px) {
-    .section-title h2 { font-size: clamp(1.2em, 4.5vw, 2.6em); }
     .hero-left, .hero-right { justify-content: center; }
     .hero-left .our-title, .hero-right .names-title { align-items: center; text-align: center; }
     .hero-left, .hero-center, .hero-right { flex: 0 1 32px; }
@@ -536,3 +534,4 @@ form button:hover {
         max-width: none;
     }
 }
+
