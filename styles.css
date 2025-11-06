@@ -487,9 +487,8 @@ form button:hover {
     }
 }
 
-/* Дополнительные исправления для очень маленьких устройств */
 @media (max-width: 380px) {
-    .section-title h2 { font-size: clamp(0.8em, 4.5vw, 2.6em); }
+    .section-title h2 { font-size: clamp(0.8em, 4.5vw, 2.6em) !important; }
     .container { padding: 15px 10px; }
     .hero-section { gap: 15px; }
     .oval-photo { width: 180px; height: 180px; }
@@ -534,4 +533,5 @@ form button:hover {
         max-width: none;
     }
 }
+
 
