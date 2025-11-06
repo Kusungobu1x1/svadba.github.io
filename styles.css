@@ -499,6 +499,10 @@ form button:hover {
     .rings-image { max-width: 140px; max-height: 120px; }
 }
 
+@media (max-width: 520px) {
+    .section-title h2 { font-size: clamp(1em, 4.5vw, 2.6em) !important; }
+}
+
 @media (max-width: 768px) {
     .hero-left, .hero-right { justify-content: center; }
     .hero-left .our-title, .hero-right .names-title { align-items: center; text-align: center; }
@@ -533,5 +537,6 @@ form button:hover {
         max-width: none;
     }
 }
+
 
 
